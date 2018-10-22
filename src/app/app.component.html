@@ -1,10 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
+<ul *ngFor="let item of items | async">
+
+  <li class="text" >
+    ID:{{item.id}}
+  <br>
+    Student Name:{{item.name}}
+    <br>
+    First Sem Marks:{{item.totalmarks[0] | percent}}
+    <br>
+    Second Sem Marks:{{item.totalmarks[1] | percent}}
+    <br>
+    Third Sem Marks:{{item.totalmarks[2]  | percent}}
   </li>
 
   
-</ul>
 
+
+ <div class="data" [ngStyle]="{'width': '10px','height':'(' + item.id + ')px', 'background': 'red'}"></div>
+</ul>
 <router-outlet></router-outlet>
