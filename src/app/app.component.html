@@ -1,7 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar class="col-sm-12" color="primary">
+  <span>Album</span>
+  
+  <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+    </ng-template>
+  </mat-menu>
+  
+<button class="float:right" mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  
+</mat-toolbar>
+
 <ul *ngFor="let item of items | async">
 
-  <li class="text" >
+  <li class="text btn btn-primary" >
     ID:{{item.id}}
   <br>
     Student Name:{{item.name}}
@@ -14,7 +30,8 @@
   </li>
 
   
-  
+  <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb_up"></mat-icon>
+  <mat-icon class="mat-icon-rtl-mirror">3d_rotation</mat-icon>
 
 
  <div class="data" [ngStyle]="{'width': '10px','height':'(' + item.id + ')px', 'background': 'red'}"></div>
