@@ -8,10 +8,12 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { TestComponent } from './test/test.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<ul *ngFor="let item of itemss | async">
+
+  <li class="text" >
+    ID:{{item.id}}
+  <br>
+    Student Name:{{item.name}}
+    <br>
+    First Sem Marks:{{item.totalmarks[0] | percent}}
+    <br>
+    Second Sem Marks:{{item.totalmarks[1] | percent}}
+    <br>
+    Third Sem Marks:{{item.totalmarks[2]  | percent}}
+  </li>
