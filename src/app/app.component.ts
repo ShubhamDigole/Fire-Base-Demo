@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { MatToolbar } from '@angular/material'
 import { MatIcon } from '@angular/material/icon';
 import { Observable, Subscription } from 'rxjs';
+import {FormControl} from '@angular/forms';
 export interface data{
   id : number,
   name : string,
