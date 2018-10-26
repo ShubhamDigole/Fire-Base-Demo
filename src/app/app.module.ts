@@ -6,7 +6,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
-import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatSidenavModule, MatFormFieldModule} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule,MatOptionModule,MatSelectModule, MatToolbarModule, MatMenuModule, MatSidenavModule, MatFormFieldModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -20,6 +20,8 @@ import {MatRadioModule} from '@angular/material/radio';
     TestComponent
   ],
   imports: [
+    MatSelectModule,
+    MatOptionModule,
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
