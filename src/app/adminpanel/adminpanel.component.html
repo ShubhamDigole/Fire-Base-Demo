@@ -1,0 +1,33 @@
+<mat-drawer-container class="example-container" hasBackdrop="false">
+  <mat-drawer #drawer mode="side"><app-test></app-test></mat-drawer>
+  <mat-drawer-content>
+    
+    
+    <div class="button btn" mat-raised-button (click)="drawer.toggle()"><mat-icon>play_arrow</mat-icon></div>
+    <ul *ngFor="let item of items | async">
+
+      <li class="text btn btn-primary" >
+        ID:{{item.id}}
+      <br>
+        Student Name:{{item.name}}
+        <br>
+        First Sem Marks:{{item.totalmarks[0] | percent}}
+        <br>
+        Second Sem Marks:{{item.totalmarks[1] | percent}}
+        <br>
+        Third Sem Marks:{{item.totalmarks[2]  | percent}}
+      </li>
+  
+      
+      <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb_up"></mat-icon>
+      <mat-icon class="mat-icon-rtl-mirror">3d_rotation</mat-icon>
+    
+    
+     
+    </ul>
+    
+    <router-outlet></router-outlet>
+    
+ 
+  </mat-drawer-content>
+</mat-drawer-container>

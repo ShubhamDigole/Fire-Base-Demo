@@ -14,10 +14,12 @@ import { TestComponent } from './test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatIconModule } from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    AdminpanelComponent
   ],
   imports: [
     MatSelectModule,
