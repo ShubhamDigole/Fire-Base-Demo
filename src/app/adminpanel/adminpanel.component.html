@@ -21,11 +21,24 @@
       
       <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb_up"></mat-icon>
       <mat-icon class="mat-icon-rtl-mirror">3d_rotation</mat-icon>
-    
+      
     
      
     </ul>
-    
+    <mat-card class="example-card col-sm-3" *ngFor="let fruit of fruits | async">
+      <mat-card-header>
+        <mat-card-title>{{fruit.fruit_name | uppercase }}</mat-card-title>
+        
+      </mat-card-header>
+      <img mat-card-image src="{{ fruit.url}}" alt="Photo of a {{ fruit.fruit_name}}">
+      <mat-card-content>
+      <h3>Price:{{fruit.price | currency }}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
     <router-outlet></router-outlet>
     
  

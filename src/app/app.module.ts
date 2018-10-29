@@ -6,7 +6,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
-import { MatButtonModule, MatCheckboxModule,MatOptionModule,MatSelectModule, MatToolbarModule, MatMenuModule, MatSidenavModule, MatFormFieldModule} from '@angular/material';
+import { MatButtonModule, MatCheckboxModule,MatOptionModule,MatSelectModule,MatCardModule, MatToolbarModule, MatMenuModule, MatSidenavModule, MatFormFieldModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -22,6 +22,7 @@ import { AdminpanelComponent } from './adminpanel/adminpanel.component';
     AdminpanelComponent
   ],
   imports: [
+    MatCardModule,
     MatSelectModule,
     MatOptionModule,
     FormsModule,

@@ -10,11 +10,11 @@ import { Observable } from '../../../node_modules/rxjs';
   export class AdminpanelComponent implements OnInit {
 
  
-
+    fruits :  Observable<any[]>;
     itemss : Observable<any[]>;
     constructor(db:AngularFirestore) { 
     this.itemss = db.collection('/registration').valueChanges();
-  
+    this.fruits = db.collection('/fruits').valueChanges();
  
   }
   ngOnInit() {
